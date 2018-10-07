@@ -106,7 +106,7 @@ public class FeedEntriesAtomBodyWriterTest {
         for (SyndEntry entry : entries) {
             if (TITLES[0].equals(entry.getTitle())) {
                 assertEquals(entry.getLink(), LINKS[0]);
-                assertEquals(entry.getTitle(), test);
+                assertEquals(entry.getTitle(), TITLES[5]);
                 assertEquals(entry.getDescription().getValue(), DESCS[0]);
                 assertEquals(entry.getPublishedDate().toString(), DATE.toString());
             } else {
