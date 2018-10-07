@@ -73,7 +73,7 @@ public class FeedEntriesAtomBodyWriterTest {
 
     private static final Date DATE = new Date();
 
-    private static final String[] TITLES = {"title12", "title2"};
+    private static final String[] TITLES = {"title1", "title2"};
     private static final String[] LINKS = {"link1", "link2"};
     private static final String[] DESCS = {"description1", "description2"};
 
@@ -106,7 +106,7 @@ public class FeedEntriesAtomBodyWriterTest {
         for (SyndEntry entry : entries) {
             if (TITLES[0].equals(entry.getTitle())) {
                 assertEquals(entry.getLink(), LINKS[0]);
-                assertEquals(entry.getTitle(), TITLES[0]);
+                assertEquals(entry.getTitle(), test);
                 assertEquals(entry.getDescription().getValue(), DESCS[0]);
                 assertEquals(entry.getPublishedDate().toString(), DATE.toString());
             } else {
