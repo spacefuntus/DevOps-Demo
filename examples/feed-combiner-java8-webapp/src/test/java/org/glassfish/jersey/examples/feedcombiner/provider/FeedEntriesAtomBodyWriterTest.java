@@ -73,7 +73,7 @@ public class FeedEntriesAtomBodyWriterTest {
 
     private static final Date DATE = new Date();
 
-    private static final String[] TITLES = {"title1", "title2"};
+    private static final String[] TITLES = {"title12", "title2"};
     private static final String[] LINKS = {"link1", "link2"};
     private static final String[] DESCS = {"description1", "description2"};
 
