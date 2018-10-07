@@ -120,7 +120,7 @@ public class FeedEntriesAtomBodyWriterTest {
 
     private List<FeedEntry> feedEntries() {
         return Arrays.asList(new FeedEntry(TITLES[0], LINKS[0], DESCS[0], DATE),
-                new FeedEntry(TITLES[3], LINKS[1], DESCS[1], DATE));
+                new FeedEntry(TITLES[1], LINKS[1], DESCS[1], DATE));
     }
 
     @Test
