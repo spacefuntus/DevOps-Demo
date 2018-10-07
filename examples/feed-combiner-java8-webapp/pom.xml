@@ -214,4 +214,10 @@
         <java.version>1.8</java.version>
         <jersey.config.test.container.port>8080</jersey.config.test.container.port>
     </properties>
+	<distributionManagement>
+   <repository>
+      <id>maven-releases</id>
+      <url>http://18.223.100.137:8081/repository/maven-releases/</url>
+   </repository>
+</distributionManagement>
 </project>
