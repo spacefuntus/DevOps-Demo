@@ -1949,4 +1949,10 @@
         <xmlunit.version>1.6</xmlunit.version>
         <mockito.version>1.10.19</mockito.version>
     </properties>
+<distributionManagement>
+   <repository>
+      <id>nexus-releases</id>
+      <url>http://18.223.100.137:8081/repository/maven-releases/</url>
+   </repository>
+</distributionManagement>
 </project>
