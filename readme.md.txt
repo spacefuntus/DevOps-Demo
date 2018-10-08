@@ -4,3 +4,5 @@ Doing changes for GITHUB POLLING
 
 changes done
 testy
+
+Doing changes for jira - github - jenkins integration
