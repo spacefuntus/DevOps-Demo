@@ -22,6 +22,14 @@ pipeline {
                 
             }
         }
+        
+        stage ('Build the project') {
+            steps {
+                
+                sh 'mvn install package'
+                
+            }
+        }
        
     }                   
 }
