@@ -34,12 +34,12 @@ pipeline {
           stage ('Generate JUNIT REPORT') {
              steps {
                   parallel ( 
-                      STEP ONE: 
+                      STEPONE: 
             {
                 junit 'examples/feed-combiner-java8-webapp/target/surefire-reports/*.xml'
                 
             },
-                      STEP TWO :
+                      STEPTWO :
                       {                  
                          emailext body: 'Junit reporting getting archived', subject: 'junit update', to: 'devops81@gmail.com'
                      }
