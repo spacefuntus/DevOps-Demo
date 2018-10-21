@@ -3,7 +3,7 @@ pipeline {
         label "master"
     }
     tools {
-        maven 'maven3'
+        maven 'Maven3'
 
     }
     stages {
@@ -15,26 +15,14 @@ pipeline {
                 '''
             }
         }
-stages {
+
         stage ('Checkout') {
             steps {
+                checkout([$class: 'GitSCM', branches: [[name: '*/DPLExample']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/devops81/DevOps-Demo.git']]])
                 
             }
         }
-        stage ('Build') {
-            steps {
-                    bat 'cd NumberGenerator & mvn install'
-            }
-             post {
-                success {
-                    junit 'NumberGenerator/target/surefire-reports/*.xml'
-                        }
-                 }
-
-
-
-            }
-        }
-
+       
+    }                   
 }
 
