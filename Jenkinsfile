@@ -30,6 +30,7 @@ pipeline {
                 }
                 
             }
+        }
           stage ('Generate JUNIT REPORT') {
             steps {
                 junit '/var/lib/jenkins/workspace/Miscelleneous/10212018/examples/feed-combiner-java8-webapp/target/surefire-reports/*.xml'
@@ -38,6 +39,6 @@ pipeline {
         }
         }
        
-    }                   
+                      
 }
 
