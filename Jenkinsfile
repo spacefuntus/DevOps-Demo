@@ -26,7 +26,7 @@ pipeline {
         stage ('Build the project') {
             steps {
                 dir("/var/lib/jenkins/workspace/Miscelleneous/10212018/examples/feed-combiner-java8-webapp") {
-                sh 'mvn install package'
+                sh 'mvn clean install clover:clover'
                 }
                 
             }
