@@ -7,7 +7,7 @@ pipeline {
 
     }
     stages {
-        stage ('SET YOUR GOALS') {
+        stage ('Initialize') {
             steps {
                 sh '''
                     echo "PATH = $PATH"
@@ -16,14 +16,14 @@ pipeline {
             }
         }
 
-        stage ('PLAN YOUR GOALS') {
+        stage ('Checkout') {
             steps {
                 checkout([$class: 'GitSCM', branches: [[name: '*/DPLExample']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/devops81/DevOps-Demo.git']]])
                 
             }
         }
         
-        stage ('START WORKING ON PLAN') {
+        stage ('Build the project') {
             steps {
                 dir("/var/lib/jenkins/workspace/Miscelleneous/10212018/examples/feed-combiner-java8-webapp") {
              sh 'mvn clean install'
@@ -31,29 +31,29 @@ pipeline {
                 
             }
         }
-          stage ('KEEP PRACTICING') {
+          stage ('Generate JUNIT REPORT') {
              steps {
                   parallel ( 
-                      'FIRST FAILED': 
+                      'Archeiving the reports': 
             {
                 junit 'examples/feed-combiner-java8-webapp/target/surefire-reports/*.xml'
                 
             },
-                      'TRY AGAIN' :
+                      'Sending out the JUNIT report :
                       {                  
                          emailext body: 'Junit reporting getting archived', subject: 'junit update', to: 'devops81@gmail.com'
                      }
                      )
             } 
         }
-        stage ('SUCCESS WILL COME') {
+        stage ('Deploy the application') {
             steps {
                
                 sh '/bin/cp  -rf  /var/lib/jenkins/workspace/Miscelleneous/10212018/examples/feed-combiner-java8-webapp/target/devops.war /home/ec2-user/tomcat/apache-tomcat-9.0.12/webapps/'
                 
             }
         }
-        stage ('SENDING SUCCESS NOTIFICATION') {
+        stage ('Send out email Notification') {
             steps {
                 emailext body: '$DEFAULT_CONTENT', subject: '$DEFAULT_SUBJECT', to: 'devops81@gmail.com'
 
@@ -64,4 +64,3 @@ pipeline {
        
                       
 }
-
