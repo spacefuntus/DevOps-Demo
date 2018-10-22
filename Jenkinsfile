@@ -39,7 +39,7 @@ pipeline {
                 junit 'examples/feed-combiner-java8-webapp/target/surefire-reports/*.xml'
                 
             },
-                      'Sending out the JUNIT report :
+                      'Sending out the JUNIT report' :
                       {                  
                          emailext body: 'Junit reporting getting archived', subject: 'junit update', to: 'devops81@gmail.com'
                      }
