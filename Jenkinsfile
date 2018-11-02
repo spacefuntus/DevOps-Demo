@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label "master"
+        label "LinuxNode4"
     }
     tools {
         maven 'Maven3'
