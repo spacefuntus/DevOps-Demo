@@ -1,6 +1,6 @@
 Committed for commitment for the commits
 
-Doing changes for GITHUB POLLING CHECK
+Doing changes for GITHUB HOOK POLLING CHECK
 
 changes done
 testy
