@@ -15,4 +15,10 @@ dir('/var/lib/jenkins/workspace/FOLDER1/Java-Maven-Pipeline/examples/feed-combin
 sh "${mvnHome}/bin/mvn clean install"}
 }
 
+stage ('Build Notification')
+
+{
+emailext body: '${SCRIPT, template="francois.email.groovy.template"}', recipientProviders: [developers()], subject: '$PROJECT_DEFAULT_SUBJECT', to: 'devops@81@gmail.com'
+}
+
 }
