@@ -9,7 +9,8 @@ stage ('SCM Checkout') {
 stage ('Compile-Package')
 
 {
-echo "under compile package"
+cd "/var/lib/jenkins/workspace/FOLDER1/Java-Maven-Pipeline/examples/feed-combiner-java8-webapp"
+
 
 
 }
