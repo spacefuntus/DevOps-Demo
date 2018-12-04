@@ -21,4 +21,15 @@ stage ('Build Notification')
 emailext body: '${SCRIPT, template="francois.email.groovy.template"}', recipientProviders: [developers()], subject: '$PROJECT_DEFAULT_SUBJECT', to: 'devops@81@gmail.com'
 }
 
+stage ('Deploy to QA')
+{
+echo "Deploying the ear to the QA tomcat server"
+}
+
+stage ('Deployment Notification')
+
+{
+emailext body: '${SCRIPT, template="francois.email.groovy.template"}', recipientProviders: [developers()], subject: '$PROJECT_DEFAULT_SUBJECT', to: 'devops@81@gmail.com'
+}
+
 }
