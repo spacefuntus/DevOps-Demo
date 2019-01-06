@@ -40,18 +40,7 @@ stage ('Deploy to QA')
 echo "Deploying the ear to the QA tomcat server"
 }
 
-stage('run-parallel-branches') {
-  steps {
-    parallel(
-      a: {
-        echo "This is branch a"
-      },
-      b: {
-        echo "This is branch b"
-      }
-    )
-  }
-}
+
 
 stage ('Deployment Notification')
 
