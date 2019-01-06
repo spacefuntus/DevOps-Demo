@@ -40,7 +40,7 @@ stage ('Deploy to QA')
 echo "Deploying the ear to the QA tomcat server"
 dir('/var/lib/jenkins/workspace/FOLDER1/Java-Maven-Pipeline/examples/feed-combiner-java8-webapp/target')
 {
-bat  'cp devops.war /home/user/warfile"
+bat  'cp devops.war /home/user/warfile'
 }
 }
 
