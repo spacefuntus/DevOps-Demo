@@ -38,7 +38,7 @@ emailext body: '${SCRIPT, template="francois.email.groovy.template"}', recipient
 stage ('Deploy to QA')
 {
 steps {
-sh 'sudo su'
+sh "sudo su"
 
 
                 
