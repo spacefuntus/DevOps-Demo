@@ -39,7 +39,7 @@ stage ('Deploy to QA')
 {
 steps {
 sh 'sudo su'
-sh 'sudo rm -rf /home/user/warfile/devops.war'
+
 
                 
             }
