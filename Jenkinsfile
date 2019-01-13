@@ -25,7 +25,7 @@ pipeline {
         
         stage ('Build the project') {
             steps {
-                dir("/home/jenkins/jenkinshome/workspace/FOLDER1/Java-Maven-Pipeline-Declarative/examples/feed-combiner-java8-webapp") {
+                dir("/home/jenkins/jenkinsagent/workspace/FOLDER1/Java-Maven-Pipeline-Declarative/examples/feed-combiner-java8-webapp") {
              sh 'mvn clean install'
                 }
                 
@@ -49,7 +49,7 @@ pipeline {
         stage ('Deploy the application') {
             steps {
                
-                sh '/bin/cp  -rf  /var/lib/jenkins/workspace/FOLDER1/Java-Maven-Pipeline-Declarative/examples/feed-combiner-java8-webapp/target/devops.war /home/ec2-user/tomcat/apache-tomcat-9.0.12/webapps/'
+                sh '/bin/cp  -rf  /home/jenkins/jenkinsagent/workspace/FOLDER1/Java-Maven-Pipeline-Declarative/examples/feed-combiner-java8-webapp/target/devops.war /home/ec2-user/tomcat/apache-tomcat-9.0.12/webapps/'
                 
             }
         }
