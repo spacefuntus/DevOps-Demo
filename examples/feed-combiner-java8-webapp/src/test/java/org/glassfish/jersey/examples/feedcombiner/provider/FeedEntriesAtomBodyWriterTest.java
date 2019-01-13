@@ -75,7 +75,7 @@ public class FeedEntriesAtomBodyWriterTest {
 
     private static final String[] TITLES = {"title1", "title2"};
     private static final String[] LINKS = {"link1", "link2"};
-    private static final String[] DESCS = {"description1", "description2"};
+    private static final String[] DESCS = {"description0", "description2"};
 
     @Rule
     public EasyMockRule mocks = new EasyMockRule(this);
