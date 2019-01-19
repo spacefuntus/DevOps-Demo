@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label "172-31-20-26(LINUX)"
+        label "172-31-20-26"
     }
     tools {
         maven 'Maven3'
