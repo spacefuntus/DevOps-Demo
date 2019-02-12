@@ -52,7 +52,7 @@
 
     <artifactId>devops-deb</artifactId>
     <packaging>war</packaging>
-    <name>devops</name>
+    <name>devops-deb</name>
 
     <dependencies>
         <dependency>
